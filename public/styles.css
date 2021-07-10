@@ -1,0 +1,100 @@
+video {
+  object-fit: cover;
+  height: 400px;
+  width: 500px;
+}
+
+#video-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+}
+
+.left_column {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+}
+
+.right_column {
+  flex: 0.2;
+  display: flex;
+  flex-direction: column;
+  background-color: purple;
+  border-left: 1px solid;
+}
+
+.main_videos {
+  flex-grow: 1;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+}
+
+.div_controls {
+  display: flex;
+  background-color: black;
+  color: white;
+  padding: 4px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button_wrapper {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 23px;
+}
+
+.button_wrapper:hover {
+  background-color: #348434;
+  border-radius: 5px;
+}
+
+.fa-phone-slash {
+  color: red;
+}
+
+.main__header {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+.div_chat_window {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+.div_send_message {
+  display: flex;
+  padding: 23px 13px;
+}
+
+#chat_message {
+  background-color: transparent;
+  flex-grow: 1;
+  background: none;
+  color: white;
+}
+
+.unmute stopVideo {
+  color: red;
+}
+
+.stopVideo {
+  color: red;
+}
