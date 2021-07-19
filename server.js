@@ -11,7 +11,6 @@ const peerServer = ExpressPeerServer(server, {
 const {
   v4: uuidV4
 } = require('uuid')
-
 app.use('/peerjs', peerServer);
 
 app.set('view engine', 'ejs')
@@ -23,10 +22,10 @@ app.get('/', (req, res) => {
 
 app.get('/:room', (req, res) => {
   res.render('room', {
-    roomId: req.params.room
+    roomId: req.params.room,
+    userName: "Amisha"
   })
 })
-
 io.on('connection', socket => {
   socket.on('join-room', (roomId, userId) => {
     socket.join(roomId)
@@ -40,6 +39,6 @@ io.on('connection', socket => {
   })
 })
 
-server.listen(process.env.PORT||3030, function() {
+server.listen(process.env.PORT || 3000, function() {
   console.log("Server running on port 3000");
 })

@@ -24,13 +24,13 @@ video {
   flex: 0.2;
   display: flex;
   flex-direction: column;
-  background-color: purple;
+  background-color: #7393B3;
   border-left: 1px solid;
 }
 
 .main_videos {
   flex-grow: 1;
-  background-color: pink;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +60,7 @@ body {
 }
 
 .button_wrapper:hover {
-  background-color: #348434;
+  background-color: grey;
   border-radius: 5px;
 }
 
@@ -91,10 +91,14 @@ body {
   color: white;
 }
 
-.unmute stopVideo {
+.unmute{
   color: red;
 }
 
 .stopVideo {
   color: red;
+}
+
+.messages{
+  color: white;
 }

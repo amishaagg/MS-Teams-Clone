@@ -14,6 +14,7 @@ navigator.mediaDevices.getUserMedia({
   myPeer.on('call', function(call) {
     call.answer(stream)
     const video = document.createElement('video')
+    //Show video is some video/canvas element
     call.on('stream', userVideoStream => {
       addVideoStream(video, userVideoStream)
     })
@@ -63,7 +64,7 @@ $('html').keydown(function(e) {
   }
 });
 socket.on("createMsg", message => {
-  $('ul').append(`<li class="message"><b>user</b><br/>${message}</li>`)
+  $('ul').append(`<li class="message"><b>${USER_NAME}</b><br/>${message}</li>`)
   $('.div_chat_window').scrollTop($('.div_chat_window').prop("scrollHeight"))
   console.log("from server", message);
 })
